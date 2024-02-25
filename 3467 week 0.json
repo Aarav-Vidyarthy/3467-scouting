@@ -53,6 +53,17 @@
           "defaultValue": false,
           "required": false,
           "code": "noShow"
+        },
+        {
+          "title": "Starting Side",
+          "type": "select",
+          "required": false,
+          "choices": {
+            "Ce": "Center",
+            "AS": "Amp Side",
+            "SS": "Source Side"
+          },
+          "defaultValue": "Center"
         }
       ]
     },
@@ -60,8 +71,15 @@
       "name": "Autonomous",
       "fields": [
         {
+          "code": "aum",
+          "title": "Left starting zone(black line)",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
           "code": "auamp",
-          "title": "Amp Scored",
+          "title": "Auto Amp Scored",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
@@ -69,7 +87,7 @@
         },
         {
           "code": "auampm",
-          "title": "Amp Missed",
+          "title": "Auto Amp Missed",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
@@ -77,40 +95,26 @@
         },
         {
           "code": "ausc",
-          "title": "Speaker Scored",
+          "title": "Auto Speaker Scored",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
         {
-          "code": "ausc",
-          "title": "Speaker Missed",
+          "code": "ausm",
+          "title": "Auto Speaker Missed",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
         {
-          "code": "auln",
-          "title": "Loaded More Notes?",
+          "code": "Auto Fou/Tech",
+          "title": " Auto Foul",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
-          "required": false
-        },
-        {
-          "code": "auf",
-          "title": "Auto Foul",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
-          "code": "aum",
-          "title": "Auto Mobility",
-          "type": "boolean",
-          "defaultValue": false,
           "required": false
         }
       ]
@@ -119,15 +123,8 @@
       "name": "Teleop",
       "fields": [
         {
-          "code": "tcoop",
-          "title": "Coopertition",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
           "code": "tamps",
-          "title": "Amp Scored",
+          "title": "Tele Amp Scored",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
@@ -135,7 +132,7 @@
         },
         {
           "code": "tampm",
-          "title": "Amp Missed",
+          "title": "Tele Amp Missed",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
@@ -143,7 +140,7 @@
         },
         {
           "code": "tsc",
-          "title": "Speaker Scored",
+          "title": "Tele Speaker Scored",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
@@ -151,7 +148,15 @@
         },
         {
           "code": "tsm",
-          "title": "Speaker Missed",
+          "title": "Tele Speaker Missed",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "Tele Fou/Tech",
+          "title": " Tele Foul",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
@@ -189,10 +194,10 @@
           "defaultValue": "No Climb"
         },
         {
-          "code": "cn",
-          "title": "Note in Trap?",
+          "code": "nit",
+          "title": "Note in trap",
           "type": "counter",
-          "default value": 0,
+          "defaultValue": 0,
           "min": 0,
           "required": false
         },
@@ -215,18 +220,6 @@
       "name": "Postmatch",
       "fields": [
         {
-          "code": "or",
-          "title": "Offense Skill",
-          "type": "select",
-          "choices": {
-            "1": "Not Effective",
-            "2": "Average",
-            "3": "Very Effective",
-            "x": "Not Observed"
-          },
-          "required": false
-        },
-        {
           "code": "dr",
           "title": "Defense Skill",
           "type": "select",
@@ -237,13 +230,6 @@
             "x": "Not Observed"
           },
           "defaultValue": "x",
-          "required": false
-        },
-        {
-          "code": "Fou/Tech",
-          "title": "Foul",
-          "type": "counter",
-          "defaultValue": 0,
           "required": false
         },
         {
