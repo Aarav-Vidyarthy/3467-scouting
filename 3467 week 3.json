@@ -72,42 +72,34 @@
       "fields": [
         {
           "code": "aum",
-          "title": "Left starting zone(black line)",
+          "title": "Exited starting zone(black line)",
           "type": "boolean",
           "defaultValue": false,
           "required": false
         },
         {
-          "code": "auamp",
-          "title": "Auto Amp Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
+          "title": "auto notes order(DONT DO):",
+          "type": "select",
+          "choices": {
+            "AP": "P (preloaded note),",
+            "AB1": "B1 (amp side wing note, blue alliance),",
+            "AB2": "B2 (aligned with speaker, blue alliance),",
+            "AB3": "B3 (podium note, blue alliance),",
+            "AR1": "R1 (amp side wing note, red alliance),",
+            "AR2": "R2 (aligned with speaker, red alliance),",
+            "AR3": "R3 (podium note, red alliance),",
+            "M1": "M1 (midline note closest to amp),",
+            "M2": "M2 (midline note 2nd from amp),",
+            "M3": "M3 (centermost note on midline),",
+            "M4": "M4 (midline note 2nd from source),",
+            "M5": "M5 (midline note closest to amp),",
+            "NN": "NN (No Notes scored)"
+          }
         },
         {
-          "code": "auampm",
-          "title": "Auto Amp Missed",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
-        },
-        {
-          "code": "ausc",
-          "title": "Auto Speaker Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
-        },
-        {
-          "code": "ausm",
-          "title": "Auto Speaker Missed",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "required": false
+          "title": "Auto Notes Scored, no spaces, etc b1m3m4m5",
+          "type": "text",
+          "code": "scouter"
         },
         {
           "code": "Auto Fou/Tech",
@@ -208,9 +200,9 @@
           "code": "harm",
           "choices": {
             "Not": "Not Completed",
-            "Fir": "First on Chain",
-            "Sec": "Second on Chain",
-            "Thir": "Third on Chain"
+            "Two": "Achieved (2 robots, climbed first)",
+            "Thr": "Achieved (2 robots, climbed second)",
+            "Four": "Achieved (3 robots)"
           },
           "defaultValue": "Not Completed"
         }
