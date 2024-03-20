@@ -5,7 +5,7 @@
   "sections": [
     {
       "name": "Prematch",
-      "preserveDataOnReset": true,
+      "preserveDataOnReset": true, 
       "fields": [
         {
           "title": "Scouter Initials",
@@ -41,13 +41,6 @@
           "code": "teamNumber"
         },
         {
-          "title": "Human Player at Amp",
-          "type": "boolean",
-          "required": false,
-          "defaultValue": false,
-          "code": "humanPlayer"
-        },
-        {
           "title": "No Show",
           "type": "boolean",
           "defaultValue": false,
@@ -59,11 +52,13 @@
           "type": "select",
           "required": false,
           "choices": {
-            "Ce": "Center",
-            "AS": "Amp Side",
-            "SS": "Source Side"
+            "SoS": "Source Side",
+            "SsS": "Source Side Subwoofer",
+            "MiS": "Middle Subwoofer",
+            "AsS": "Amp Side Subwoofer",
+            "AmS": "Amp Side"
           },
-          "defaultValue": "Center"
+          "defaultValue": "Middle Subwoofer"
         }
       ]
     },
@@ -72,16 +67,15 @@
       "fields": [
         {
           "code": "aum",
-          "title": "Exited starting zone(black line)",
+          "title": "Exited starting zone (black line)",
           "type": "boolean",
           "defaultValue": false,
           "required": false
         },
         {
-          "title": "auto notes order(DONT DO):",
+          "title": "auto notes order (FOR REFERENCE, DON'T DO):",
           "type": "select",
-          "choices": {
-            "AP": "P (preloaded note),",
+          "choices": { 
             "AB1": "B1 (amp side wing note, blue alliance),",
             "AB2": "B2 (aligned with speaker, blue alliance),",
             "AB3": "B3 (podium note, blue alliance),",
@@ -92,14 +86,21 @@
             "M2": "M2 (midline note 2nd from amp),",
             "M3": "M3 (centermost note on midline),",
             "M4": "M4 (midline note 2nd from source),",
-            "M5": "M5 (midline note closest to amp),",
-            "NN": "NN (No Notes scored)"
+            "M5": "M5 (midline note closest to source),"
           }
         },
         {
-          "title": "Auto Notes Scored, no spaces, etc b1m3m4m5",
+          "title": "Auto Notes Picked Up, no spaces, etc b1m3m4m5",
           "type": "text",
-          "code": "scouter"
+          "code": "autopickup"
+        },
+        {
+          "title": "Auto Notes Scored",
+          "type": "counter",
+          "code": "autoscore",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
         },
         {
           "code": "Auto Fou/Tech",
@@ -147,6 +148,14 @@
           "required": false
         },
         {
+          "code": "tfed",
+          "title": "Tele Notes Fed (Shot back for other alliance members to score)",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
           "code": "Tele Fou/Tech",
           "title": " Tele Foul",
           "type": "counter",
@@ -180,8 +189,7 @@
           "choices": {
             "No": "No Climb",
             "P": "Parked",
-            "Mc": "Middle Chain",
-            "Sc": "Side Chain"
+            "HC": "Hanging on chain"
           },
           "defaultValue": "No Climb"
         },
@@ -199,10 +207,9 @@
           "required": true,
           "code": "harm",
           "choices": {
-            "Not": "Not Completed",
-            "Two": "Achieved (2 robots, climbed first)",
-            "Thr": "Achieved (2 robots, climbed second)",
-            "Four": "Achieved (3 robots)"
+            "First": "Not Completed",
+            "Second": "Achieved (2 robots)",
+            "Third": "Achieved (3 robots)"
           },
           "defaultValue": "Not Completed"
         }
@@ -257,7 +264,7 @@
           "title": "Comments",
           "type": "text",
           "min": 0,
-          "max": 50,
+          "max": 280,
           "required": false
         }
       ]
