@@ -219,6 +219,13 @@
       "name": "Postmatch",
       "fields": [
         {
+          "code": "ns",
+          "title": "Note Stuck",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
           "code": "dr",
           "title": "Defense Skill",
           "type": "select",
