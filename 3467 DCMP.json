@@ -73,26 +73,20 @@
           "required": false
         },
         {
-          "title": "auto notes order (FOR REFERENCE, DON'T DO):",
+          "code": "a_gp_Path",
+          "title": "Auto Game Piece Path",
           "type": "select",
-          "choices": { 
-            "AB1": "B1 (amp side wing note, blue alliance),",
-            "AB2": "B2 (aligned with speaker, blue alliance),",
-            "AB3": "B3 (podium note, blue alliance),",
-            "AR1": "R1 (amp side wing note, red alliance),",
-            "AR2": "R2 (aligned with speaker, red alliance),",
-            "AR3": "R3 (podium note, red alliance),",
-            "M1": "M1 (midline note closest to amp),",
-            "M2": "M2 (midline note 2nd from amp),",
-            "M3": "M3 (centermost note on midline),",
-            "M4": "M4 (midline note 2nd from source),",
-            "M5": "M5 (midline note closest to source),"
+          "multiSelect": true,
+          "choices": {
+            "1": "Speaker 3 (Source Side)",
+            "2": "Speaker 2 (Middle)",
+            "3": "Speaker 1 (Amp Side)",
+            "4": "Midline 5 (Source Edge)",
+            "5": "Midline 4",
+            "6": "Midline 3 (Middle)",
+            "7": "Midline 2",
+            "8": "Midline 1 (Amp Edge)"
           }
-        },
-        {
-          "title": "Auto Notes Picked Up, no spaces, etc b1m3m4m5",
-          "type": "text",
-          "code": "autopickup"
         },
         {
           "title": "Auto Notes Scored",
