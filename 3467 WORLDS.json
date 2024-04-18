@@ -1,7 +1,7 @@
 {
   "$schema": "../schema.json",
   "title": "QRScout",
-  "page_title": "Crescendo",
+  "page_title": "Crescendo 3467 ",
   "sections": [
     {
       "name": "Prematch",
@@ -219,38 +219,36 @@
       "name": "Postmatch",
       "fields": [
         {
-          "code": "ns",
-          "title": "Note Stuck",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
           "code": "dr",
           "title": "Defense Skill",
           "type": "select",
+          "multiSelect": true,
           "choices": {
-            "1": "Not Effective",
-            "2": "Average",
-            "3": "Very Effective",
-            "x": "Not Observed"
+            "Poor" : "Played ineffective defense or drew too many fouls",
+            "Average": "Played average defense",
+            "Effective1": "Effective at disrupting other teams' source pickup",
+            "Effective2": "Effective at slowing down the scoring of other teams",
+            "Very Effective": "Shut other teams down",
+            "x": "Did not play defense"
           },
           "defaultValue": "x",
           "required": false
         },
         {
-          "code": "d",
-          "title": "Died",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
-          "code": "to",
-          "title": "Tipped Over",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
+          "code": "dis",
+          "title": "Disabled?",
+          "type": "select",
+          "multiselect": true,
+          "choices": {
+            "brownout" : "Not fully dead but slower performance (browning out)",
+            "died&back" : "Died but came back",
+            "notestuck": "Note got stuck in the robot forcing it to stop playing offense",
+            "tipped" : "Tipped over",
+            "damaged" : "Damage to the robot caused it to disable",
+            "died" : "Died",
+            "x" : "Did not die"
+          },
+          "defaultValue": "x"
         },
         {
           "code": "yc",
@@ -266,6 +264,22 @@
           "defaultValue": false,
           "required": false
         },
+        {
+          "code": "commentags",
+          "title": "Comment Tags (select all that apply)",
+          "type": "select",
+          "multiSelect": true,
+          "choices": {
+            "slowpickup": "Slow pickup at the source",
+            "slowamp" : "Slow placement at the amp",
+            "clumsy" : "Clumsy or tippy driving",
+            "patient" : "Plays patiently",
+            "poorhandoff": "Intake to shooter handoff is inconsistent",
+            "slowintake": "Ground pickup is slow",
+            "notesdropped": "Note(s) dropped from intake/shooter",
+            "blockedshots" : "Was able to block shots"
+          }
+          },
         {
           "code": "co",
           "title": "Comments",
